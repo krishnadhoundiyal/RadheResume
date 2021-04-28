@@ -14,10 +14,10 @@ class Header extends Component {
     const description = this.props.data.description;
 
     return (
-      <header id="home" style={{backgroundImage:"url(../images/header-background.jpg)"}}>
+      <header id="home" style={{backgroundImage:"url(../images/header-background.jpg)",backgroundSize:"cover"}}>
 
 
-        <nav id="nav-wrap">
+        <nav id="nav-wrap" >
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
             Show navigation
           </a>
@@ -56,21 +56,15 @@ class Header extends Component {
         <div className="row banner">
           <div className="banner-text">
             <Fade bottom>
-              <h1 className="responsive-headline" style={{fontFamily: "-webkit-body"}}>DREAM-THEATRE</h1>
+              <h1 className="responsive-headline" >DREAM-THEATRE</h1>
             </Fade>
             <Fade bottom duration={1200}>
-              <h3>Radhe Dhoundiyal is an avid reader and  has aspiration for authoring books. He devotes his time rigoursly in training for long distance running. He wants to represent India in international events. Radhe has also developed a good understanding about electric circuits and makes his own miniature models of drones and electric trains. 
+              <h3>Radhe Dhoundiyal is an avid reader and  has aspiration for authoring books. He devotes his time rigoursly in training for long distance running. He wants to represent India in international events. Radhe has also developed a good understanding about electric circuits and makes his own miniature models of drones and electric trains.
 
 			</h3>
             </Fade>
             <hr />
-            <Fade bottom duration={2000}>
-              <ul className="social">
-                <a href={project} className="button btn project-btn">
-                  <i className="fa fa-book"></i>Project
-                </a>
-              </ul>
-            </Fade>
+
           </div>
         </div>
 

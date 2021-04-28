@@ -18,24 +18,33 @@ class Resume extends Component {
     if (!this.props.data) return null;
 
     const skillmessage = this.props.data.skillmessage;
+    const opts = {
+      height: '200',
+      width: '320',
+      playerVars: {
+        // https://developers.google.com/youtube/player_parameters
+      autoplay: 0,
+    }
+  };
 	const sports = [{
 		sports : "Junior Sports India - 2019",
 		category : "400 meters",
-		position: 1,
-		description:"Annual Event conducted within Delhi schools",
-		video : "o5XD0d9Yrak",
-		
+		position: "Position - 1",
+		description:"Annual Event conducted within Delhi schools to promote Sports",
+		img : "../images/jsi2019.jpeg",
+
 	},{
 		sports : "SportyGo - 2019",
 		category : "3000 meters",
-		position: 1,
-		description:"Annual Event conducted within Delhi schools",
-		img : "../images/f.jpg",
+		position: "Position - 1",
+		description:"An annual event conducted in Jawahar Lal Statdium to nurture athletism",
+		img : "../images/sportyGO.jpeg",
 	},{
 		sports : "Airtel Marathon - 2020",
 		category : "5000 meters",
-		position: 1,
-		description:"Annual Event conducted within Delhi schools",
+		position: "Position : 1",
+		description:"Airtel Marathon a prestigous annual run. As I am under 15 years only allowed to\
+    participate in 5K race.",
 		img : "../images/gold.png",
 	}
 	]
@@ -43,28 +52,10 @@ class Resume extends Component {
 		type : "Books Authored",
 		category : "Authored",
 		name: "The Hunt for the Hotel Ghost - 2020",
-		description:"Annual Event conducted within Delhi schools",
+		description:"Written during the lockdown this is my first foray into writing - Available on \
+    Kindle, the ASIN is B08QQ6LHY1",
 		img : "../images/book.jpg",
-		
-	},{
-		type : "Books Read",
-		category : "Read",
-		name: "Harry Potter - All Volumes",
-		description:"Annual Event conducted within Delhi schools",
-		img : "../images/book.jpg",
-	},{
-		type : "Sanskrit - Ucharan",
-		category : "Memorization",
-		name: "Rudrashtakam",
-		description:"Annual Event conducted within Delhi schools",
-		video : "yDo-fAPd1PQ",
-	},
-	{
-		type : "Hindi - Ucharan",
-		category : "Memorization",
-		name: "Krishna Ki Chetavani",
-		description:"Annual Event conducted within Delhi schools",
-		video : "HXq5IGci_Ec&t=4s",
+
 	}
 	]
     const education = sports.map(function (sport) {
@@ -77,11 +68,11 @@ class Resume extends Component {
           </p>
           <p>{sport.description}</p>
 		  {"video" in sport ? (
-				<Youtubecard id={sport.video} />
+				<Youtubecard id={sport.video} videoClass="yVideo"   />
 			  ) : (
 				<ImgCard id={sport.img} />
 			  )}
-		  
+
         </div>
       );
     });
@@ -92,11 +83,11 @@ class Resume extends Component {
           <h3>{interest.category}</h3>
           <p className="info">
             {interest.name}
-           
+
           </p>
           <p>{interest.description}</p>
 		  {"video" in interest ? (
-				<Youtubecard id={interest.video} />
+				<Youtubecard id={interest.video} videoClass="yVideo"  />
 			  ) : (
 				<ImgCard id={interest.img} />
 			  )}
@@ -104,7 +95,28 @@ class Resume extends Component {
       );
     });
 
-    const skills = this.props.data.skills.map((skills) => {
+    const skills =  [
+      {
+        "name":"Running",
+        "level":"80%"
+      },
+      {
+        "name":"Literature",
+        "level":"70%"
+      },
+      {
+        "name":"Applied Science",
+        "level":"80%"
+      },
+      {
+        "name":"Gaming",
+        "level":"70%"
+      },
+      {
+        "name":"Instruments(Guitar)",
+        "level":"60%"
+      }
+    ].map((skills) => {
       const backgroundColor = this.getRandomColor();
       const className = "bar-expand " + skills.name.toLowerCase();
       const width = skills.level;
@@ -151,12 +163,12 @@ class Resume extends Component {
           <div className="row skill">
             <div className="three columns header-col">
               <h1>
-                <span>Skills</span>
+                <span>Interests</span>
               </h1>
             </div>
 
             <div className="nine columns main-col">
-              <p>{skillmessage}</p>
+              <p>Here's what I love doing</p>
 
               <div className="bars">
                 <ul className="skills">{skills}</ul>

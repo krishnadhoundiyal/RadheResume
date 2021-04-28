@@ -5,7 +5,19 @@ class Footer extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const networks = this.props.data.social.map(function (network) {
+    const networks = [
+     {
+       "name":"facebook",
+       "url":"https://www.facebook.com/krishna.dhoundiyal.9",
+       "className":"fa fa-facebook"
+     },
+
+     {
+       "name":"linkedin",
+       "url":"https://www.linkedin.com/in/krishna-dhoundiyal-9578a113/",
+       "className":"fa fa-linkedin"
+     }
+   ].map(function (network) {
       return (
         <li key={network.name}>
           <a href={network.url}>
@@ -22,15 +34,7 @@ class Footer extends Component {
             <div className="twelve columns">
               <ul className="social-links">{networks}</ul>
 
-              <ul className="copyright">
-                <li>&copy; Copyright 2021 Nordic Giant</li>
-                <li>
-                  Design by{" "}
-                  <a title="Styleshout" href="http://www.styleshout.com/">
-                    Styleshout
-                  </a>
-                </li>
-              </ul>
+
             </div>
           </Fade>
 

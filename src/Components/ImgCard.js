@@ -24,12 +24,12 @@ yVideo:  {
 }));
 
 export default function ImgCard(props) {
-	
+
     const classes = useStyles()
 
     return (
         <div >
-			<img className={classes.yVideo} src={props.id}  />;
+			<img className={classes.yVideo} src={props.id}  />
 		</div>
     )
 }
