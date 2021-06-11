@@ -38,7 +38,7 @@ class Resume extends Component {
 		category : "3000 meters",
 		position: "Position - 1",
 		description:"An annual event conducted in Jawahar Lal Statdium to nurture athletism",
-		img : "../images/sportyGO.jpeg",
+		img : "../images/SportyGO.jpg",
 	},{
 		sports : "Airtel Marathon - 2020",
 		category : "5000 meters",
