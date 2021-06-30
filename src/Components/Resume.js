@@ -45,7 +45,7 @@ class Resume extends Component {
 		position: "Position : 1",
 		description:"Airtel Marathon a prestigous annual run. As I am under 15 years only allowed to\
     participate in 5K race.",
-		img : "../images/gold.png",
+		img : "../images/gold.jpg",
 	}
 	]
 	const literature = [{
