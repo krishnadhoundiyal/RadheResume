@@ -41,7 +41,7 @@ class Portfolio extends Component {
         "id":"HXq5IGci_Ec"
       },
 	  {
-        "title":"Sanskrit-Presentation",
+        "title":"Sanskrit-Presentations",
         "category":"Essay",
 
         "id":"4huetn0fs60"
