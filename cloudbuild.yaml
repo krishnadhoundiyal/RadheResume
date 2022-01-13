@@ -3,3 +3,16 @@ steps:
   args: [ 'build', '-t', '$_IMAGE', '-f', 'Dockerfile', '.' ]
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', '$_IMAGE']
+ # Deploy container image to Cloud Run
+ - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+   entrypoint: gcloud
+   args:
+   - 'run'
+   - 'deploy'
+   - 'jenkins@ambient-net-308011.iam.gserviceaccount.com'
+   - '--image'
+   - '$_IMAGE'
+   - '--region'
+   - 'us-central1'
+ images:
+ - '$_IMAGE'
