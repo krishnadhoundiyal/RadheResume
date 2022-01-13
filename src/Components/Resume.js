@@ -114,7 +114,11 @@ class Resume extends Component {
       },
       {
         "name":"Instruments(Guitar)",
-        "level":"60%"
+        "level":"10%"
+      },
+	  {
+        "name":"Astronomy",
+        "level":"50%"
       }
     ].map((skills) => {
       const backgroundColor = this.getRandomColor();
