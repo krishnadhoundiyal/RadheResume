@@ -56,6 +56,14 @@ class Resume extends Component {
     Kindle, the ASIN is B08QQ6LHY1",
 		img : "../images/book.jpg",
 
+	},
+	{
+		type : "Sanskrit Presentation",
+		category : "PAN India Competetion",
+		name: "XIX Brem Dutt Pan India Inter School Competetion",
+		description:"Created and Presented an Essay in Sanskrit based on On-line Eduction during Covid Times" ,
+		img : "../images/sanskrit.jpg",
+
 	}
 	]
     const education = sports.map(function (sport) {
