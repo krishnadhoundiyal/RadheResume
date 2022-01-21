@@ -30,7 +30,7 @@ class About extends Component {
             <div className="nine columns main-col">
               <h2>About Me</h2>
 
-              <ul><li>11 year old long distance runner clocking 19 mins for 5 kms and 39 mins for 10 kms</li><li> Have a great zeal for building electric circuites</li> <li>Passionate Sanskrit follower and an avid reader</li><li> Tried my hands in acting recently. </li></ul>
+              <ul><li>12 year old long distance runner clocking 19 mins for 5 kms and 39 mins for 10 kms</li><li> Have a great zeal for building electric circuites</li> <li>Passionate Sanskrit follower and an avid reader</li><li> Tried my hands in acting recently. </li></ul>
               <div className="row">
                 <div className="columns contact-details">
                   <h2>Contact Details</h2>
