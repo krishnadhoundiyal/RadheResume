@@ -64,6 +64,14 @@ class Resume extends Component {
 		description:"Created and Presented an Essay in Sanskrit based on On-line Eduction during Covid Times" ,
 		img : "../images/sanskrit.jpg",
 
+	},
+	{
+		type : "Comic-cator Presentation",
+		category : "Ínter School Presentation",
+		name: "Goenkan TechFusion 2022",
+		description:"Inter Goenkan event to demonstrate mindfulness to conserve Electric Energy through comic" ,
+		img : "../images/comic.jpeg",
+
 	}
 	]
     const education = sports.map(function (sport) {
