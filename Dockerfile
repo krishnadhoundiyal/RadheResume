@@ -8,6 +8,6 @@ COPY package*.json .
 RUN npm install -y
 COPY . ./ 
 RUN npm run build
-COPY /app/build /usr/share/nginx/html
+COPY /app/build /usr/share/nginx/html/
 EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
