@@ -67,7 +67,7 @@ class Resume extends Component {
 	},
 	{
 		type : "Comic-cator Presentation",
-		category : "Ínter School Presentation",
+		category : "Ínter School Presentations",
 		name: "Goenkan TechFusion 2022",
 		description:"Inter Goenkan event to demonstrate mindfulness to conserve Electric Energy through comic" ,
 		img : "../images/comic.jpeg",
