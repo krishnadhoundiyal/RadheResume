@@ -72,8 +72,33 @@ class Resume extends Component {
 		description:"Inter Goenkan event to demonstrate mindfulness to conserve Electric Energy through comic" ,
 		img : "../images/comic.jpeg",
 
+	},
+  {
+		type : "Book-Tech Digital Presentation",
+		category : "Ínter School Presentations",
+		name: "CrossRaods 2022 - DAV School",
+		description:"Select an award wining book and read an excerpt using creative tools and props" ,
+		img : "../images/crossroads.jpg",
+
+	},
+  {
+		type : "Certification",
+		category : "Olympiad",
+		name: "Silverzone English Olympiad - VII",
+		description:"English Olympiad" ,
+		img : "../images/eng-silverzone.jpg",
+
 	}
-	]
+	];
+  const mathematics = [{
+		type : "Certification",
+		category : "Olympiad",
+		name: "Silverzone Mathematics Olympiad - VII",
+		description:"Mathematics Olympiad",
+		img : "../images/maths-silverzone.jpg",
+
+	}
+]
     const education = sports.map(function (sport) {
       return (
         <div key={sport.sports}>
@@ -94,6 +119,23 @@ class Resume extends Component {
     });
 
     const work = literature.map(function (interest) {
+      return (
+        <div key={interest.type}>
+          <h3>{interest.category}</h3>
+          <p className="info">
+            {interest.name}
+
+          </p>
+          <p>{interest.description}</p>
+		  {"video" in interest ? (
+				<Youtubecard id={interest.video} videoClass="yVideo"  />
+			  ) : (
+				<ImgCard id={interest.img} />
+			  )}
+        </div>
+      );
+    });
+    const maths = mathematics.map(function (interest) {
       return (
         <div key={interest.type}>
           <h3>{interest.category}</h3>
@@ -176,6 +218,17 @@ class Resume extends Component {
             </div>
 
             <div className="nine columns main-col">{work}</div>
+          </div>
+        </Slide>
+        <Slide left duration={1300}>
+          <div className="row work">
+            <div className="three columns header-col">
+              <h1>
+                <span>Mathematics</span>
+              </h1>
+            </div>
+
+            <div className="nine columns main-col">{maths}</div>
           </div>
         </Slide>
 
