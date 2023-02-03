@@ -46,6 +46,12 @@ class Resume extends Component {
 		description:"Airtel Marathon a prestigous annual run. As I am under 15 years only allowed to\
     participate in 5K race.",
 		img : "../images/gold.jpg",
+	},{
+		sports : "Vedanta Marathon - 2022",
+		category : "5000 meters",
+		position: "Position : 1",
+		description:"Vedanta 5KM virtual run - clocked 20.42 mins.",
+		img : "../images/vedanta.jpg",
 	}
 	]
 	const literature = [{
@@ -88,6 +94,14 @@ class Resume extends Component {
 		description:"English Olympiad" ,
 		img : "../images/eng-silverzone.jpg",
 
+	},
+  {
+		type : "Certification",
+		category : "Harvard EDX",
+		name: "Backyard Meteorology: The Science of Weather",
+		description:"https://courses.edx.org/certificates/1d38276e8b304818b61a323526e43c1e",
+		img : "../images/harvard.jpg",
+
 	}
 	];
   const mathematics = [{
@@ -97,8 +111,7 @@ class Resume extends Component {
 		description:"Mathematics Olympiad",
 		img : "../images/maths-silverzone.jpg",
 
-	}
-]
+	}]
     const education = sports.map(function (sport) {
       return (
         <div key={sport.sports}>
